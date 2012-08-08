@@ -11,3 +11,18 @@ echo "$key=================>$value<br/>";
 }
 }
 ?>
+
+
+before restructure
+
+<?php
+$test=array(array(array('tara'=>'zhiyan','telephone'=>'enjing','birthday'=>'xiuli')),
+            array(array('koroa'=>'hanguo','wazi'=>'day by day')));
+for($layer=0;$layer<2;$layer++){
+for($row=0;$row<2;$row++){
+while(list($key,$value)=each($test[$layer][$row])){
+echo "$key==================>$value <br/>";
+}
+}
+}
+?>
