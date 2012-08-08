@@ -1,0 +1,13 @@
+今天闲来无事，上海暴雨大风，于是，将之前自己写的一段代码拿出来自己review，重构，果然发现问题啦，多循环了一次，，，，，，，faint，修改如下：
+
+<?php
+$test=array(array(array('tara'=>'zhiyan','telephone'=>'enjing','birthday'=>'xiuli')),
+            array(array('koroa'=>'hanguo','wazi'=>'day by day')));
+for($layer=0;$layer<2;$layer++){
+for($row=0;$row<1;$row++){
+while(list($key,$value)=each($test[$layer][$row])){
+echo "$key=================>$value<br/>";
+}
+}
+}
+?>
